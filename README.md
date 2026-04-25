@@ -6,17 +6,19 @@
 
 ## What this is
 
-The **Playful Sincerity Digital Core (PSDC)** is a working, evolving environment that a single researcher and an AI system built on top of [Claude Code](https://docs.anthropic.com/en/docs/claude-code) so they could work together on hard things without the AI drifting, fabricating, or losing the thread.
+The **Playful Sincerity Digital Core (PSDC)** is a multidisciplinary innovation environment built on top of [Claude Code](https://docs.anthropic.com/en/docs/claude-code). It is a configuration layer that turns a language model into a daily collaborator across whatever a person is actually trying to do — research, writing, business development, strategy, design, governance work, language learning, software engineering, planning, outreach, philosophy, all of it. The constraint is not domain. The constraint is whether the work benefits from a partner with patience, breadth, and verification discipline. Most serious work does.
+
+The thesis is straightforward. Big problems are not domain-shaped. They cross fields, cross stakeholders, cross timescales. They reward people who can hold a research project, a business, an event, a creative practice, and a long-running theoretical investigation in the same head at the same time — and they punish people who can't. A digital core is what makes the holding tractable. It externalizes the methodology, the institutional memory, the cross-project context that holds it all together, and the verification habits that keep it honest. With one, multidisciplinary work stops feeling like five jobs in a trenchcoat and starts compounding.
 
 Three layers, from the AI's perspective:
 
 - **Engine** — Claude, the language model that does the reasoning. *Anthropic's.*
 - **Harness** — Claude Code, the CLI that gives the model files, shell, web, and subagents. *Anthropic's.*
-- **Configuration** — the rules, skills, agents, hooks, and chronicle that shape how the model actually works. *This repository. The Meta System branch of PSDC.*
+- **Configuration** — the rules, skills, hooks, chronicle, and memory that shape how the model actually works. *This repository. The Meta System branch of PSDC.*
 
-This repo is the **Meta System** branch of the broader Playful Sincerity Digital Core. It is a sanitized public subset — the behavioral infrastructure, the patterns, the utilities — not the personal chronicle, memory, or project-specific workflows. What you see is what's portable. The engine and the harness are unchanged; the configuration is what you can clone, fork, and make your own.
+This repo is the **Meta System** — the public, sanitized, take-it-and-run-it version of the configuration layer. The behavioral infrastructure, the patterns, the utilities. Not the personal chronicle, not the memory contents, not the project-specific workflows. What you see is what's portable. The engine and the harness are unchanged; the configuration is what you can clone, fork, sanitize-further, and make your own. Anyone can pick this up and adapt it to their own domains.
 
-> This is not just for code. The system is used daily for research, writing, planning, language learning, running a consulting practice, event ops, and yes — also software engineering. Treat it that way and it grows that way.
+> This is not just for code. The live system is in daily use across mathematical research, candidate-physics theorizing, formal-language research, applied consulting and business development, governance and societal-systems research, philosophical frameworks, media production, design, writing, planning, language learning, and yes — software engineering too. The methodology generalizes. Treat it that way and it grows that way.
 
 ---
 
@@ -96,6 +98,7 @@ Skills are invoked explicitly via `/command`. Each is a self-contained markdown 
 - **/multi-session** — decompose large tasks into parallel session briefs that each drive a separate conversation
 - **/carryover** — generate a prescriptive recovery document before context compaction
 - **/migrate** — create a context migration prompt to jumpstart a new conversation in a clean window
+- **/covibe** — multiplayer Claude Code coordination; multiple sessions coordinate via a shared git repo, no server required
 
 **Research**
 - **/research-papers** — search academic papers across 20+ databases, traverse citation graphs, extract findings
@@ -301,7 +304,7 @@ This is a work in progress. Some of what it's missing:
 - **Enforcement is uneven.** Only two rules have Level-3 hook enforcement; others rely on the model remembering.
 - **Documentation lags reality.** The live private system evolves faster than the public snapshot. Expect drift between this repo and the methodology paper's description of a given rule or skill.
 - **Not all of this generalizes.** Some rules (`n8n-build-method`, `pdf-generation`) are domain-specific. Others (`breath`, `stateless-conversations`) are universal. The catalog doesn't sort by that axis yet.
-- **Single-user-tested.** The system has been shaped by one operator's daily use. Multi-user patterns exist (`covibe-coordination` in the live system) but aren't ported here because they depend on tooling that's still in flux.
+- **Single-user-tested.** The system has been shaped by one operator's daily use. The `/covibe` skill in this repo is the first multi-user coordination pattern shipping publicly; it works for two-to-a-handful of operators sharing a git repo, but multi-team scale is untested.
 
 The methodology paper is the most honest account of what's real and what's provisional: [Digital-Core-Methodology](https://github.com/Playful-Sincerity/DCM-Digital-Core-Methodology).
 

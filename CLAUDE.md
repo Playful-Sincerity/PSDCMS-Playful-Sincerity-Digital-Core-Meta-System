@@ -7,7 +7,7 @@ This is a git-tracked configuration system. `~/.claude/` directories (skills, ag
 ## What this repo contains
 
 - **`rules/`** — ~32 behavioral rules (safety, workflow, methodology, research, voice, quality). Each is a short markdown file with a path-scoped YAML frontmatter.
-- **`skills/`** — ~21 slash-command skills. Each lives in `skills/<name>/SKILL.md`.
+- **`skills/`** — ~23 slash-command skills. Each lives in `skills/<name>/SKILL.md`.
 - **`knowledge/`** — Best-practices KB, GH Scout subsystem, debate protocol, visualization references, research-domain profiles, testing practices, research-paper writing guide.
 - **`scripts/`** — Hook scripts (pre-flight, session-tip, context-reinject, auto-test, chronicle-nudge, breath-nudge, model-router, routing-nudge, hook-log, validate-plan, gemini-fallback, pdf).
 - **`security/`** — Security knowledge base (README + practices templates).
